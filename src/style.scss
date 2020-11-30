@@ -1,3 +1,54 @@
 body {
   margin: 0;
+  background: #333;
+}
+
+.animated-timer {
+  border-radius: 100%;
+  position: absolute;
+
+  .anim-timer-minute-hand {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    &::after {
+      content: "";
+      width: 10%;
+      height: 30%;
+      border-radius: 100px 100px 0 0;
+      background-color: white;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -90%);
+    }
+  }
+
+  .anim-timer-second-hand {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    &::after {
+      content: "";
+      width: 10%;
+      height: 45%;
+      border-radius: 100px 100px 0 0;
+      background-color: white;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -90%);
+    }
+  }
+
+  .anim-timer-center-circle {
+    position: absolute;
+    background-color: white;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 100%;
+  }
 }
