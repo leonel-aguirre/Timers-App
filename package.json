@@ -4,7 +4,7 @@
   "description": "A React web app for managing timers.",
   "main": "index.js",
   "scripts": {
-    "server": "webpack-dev-server --https",
+    "server": "webpack-dev-server",
     "build": "webpack"
   },
   "repository": {

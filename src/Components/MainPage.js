@@ -14,11 +14,15 @@ const MainPage = () => (
       <div className="options">
         <div className="option">
           <div>Go to an already existing timer:</div>
-          <input type="text" placeholder="Enter a valid timer ID" />
+          <input
+            type="text"
+            className="text-input"
+            placeholder="Enter a valid timer ID"
+          />
         </div>
         <div className="option">
           <div>Or create a new one:</div>
-          <button className="btn-create">CREATE</button>
+          <button className="btn btn-create">CREATE</button>
         </div>
       </div>
     </div>

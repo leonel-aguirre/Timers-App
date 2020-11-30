@@ -42,5 +42,6 @@ module.exports = {
   ],
   devServer: {
     publicPath: "/server/",
+    port: 4040,
   },
 };
