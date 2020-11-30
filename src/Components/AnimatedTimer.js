@@ -21,7 +21,7 @@ const AnimatedTimer = ({ timestamp, size, x, y }) => {
       style={{
         width: size,
         height: size,
-        border: `${0.1 * size}px solid white`,
+        borderWidth: `${0.1 * size}px`,
         left: x,
         top: y,
       }}
