@@ -1,11 +1,11 @@
 import React from "react";
-import CreateTimerModal from "./CreateTimerModal";
+// import CreateTimerModal from "./CreateTimerModal";
 import MainPage from "./MainPage";
 
 const App = () => (
   <div>
     <MainPage />
-    <CreateTimerModal />
+    {/* <CreateTimerModal /> */}
   </div>
 );
 
