@@ -4,14 +4,12 @@ const path = require("path");
 
 module.exports = {
   mode: "development",
-  context: __dirname,
   entry: {
     app: ["./src/index.js"],
   },
   output: {
     path: path.resolve(__dirname, "build/"),
     filename: "bundle.js",
-    publicPath: "./",
   },
   module: {
     rules: [
@@ -41,7 +39,6 @@ module.exports = {
     }),
   ],
   devServer: {
-    publicPath: "/server/",
     port: 4040,
   },
 };
