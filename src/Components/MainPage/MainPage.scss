@@ -1,0 +1,61 @@
+@import "../../scss/index.scss";
+
+.main-page {
+  height: 100vh;
+  background: linear-gradient(111.34deg, #3a0ca3 0%, #9b5de5 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1;
+  }
+
+  &__title {
+    font-size: 107px;
+    font-weight: 900;
+    text-align: center;
+    color: #fff19a;
+  }
+
+  &__subtitle {
+    font-weight: 500;
+    font-size: 63px;
+    text-align: center;
+    color: #ffffff;
+  }
+
+  &__option {
+    display: flex;
+    margin: 15px;
+    justify-content: flex-end;
+  }
+
+  &__option-text {
+    font-weight: 500;
+    font-size: 36px;
+    text-align: center;
+    color: #ffffff;
+    margin-right: 20px;
+  }
+
+  &__create-button {
+    @extend %button;
+
+    font-size: 30px;
+    width: 420px;
+  }
+
+  &__timer-id-input {
+    @extend %text-input;
+
+    width: 420px;
+    font-size: 30px;
+    padding: 0 15px;
+  }
+}

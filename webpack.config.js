@@ -1,4 +1,5 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const EslintWebpackPlugin = require("eslint-webpack-plugin");
 const path = require("path");
 
@@ -8,21 +9,18 @@ module.exports = {
     app: ["./src/index.js"],
   },
   output: {
+    publicPath: "/",
     path: path.resolve(__dirname, "build/"),
     filename: "bundle.js",
   },
   module: {
     rules: [
       {
-        test: /\.pug$/,
-        use: ["pug-loader"],
-      },
-      {
         test: /\.s[ac]ss$/i,
-        use: ["style-loader", "css-loader", "sass-loader"],
+        use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
       },
       {
-        test: /\.js$/,
+        test: /\.(js)x?$/,
         exclude: /node_modules/,
         use: {
           loader: "babel-loader",
@@ -30,15 +28,23 @@ module.exports = {
       },
     ],
   },
+  resolve: {
+    extensions: [".js", ".jsx"],
+  },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./src/index.pug",
+      template: "./src/index.html",
     }),
+    new MiniCssExtractPlugin(),
     new EslintWebpackPlugin({
-      files: "**/*.js",
+      extensions: ["js", "jsx"],
     }),
   ],
   devServer: {
     port: 4040,
+    contentBase: path.join(__dirname, "build"),
+    historyApiFallback: true,
+    open: true,
+    hot: true,
   },
 };

@@ -1,3 +1,5 @@
+import "./AnimatedTimer.scss";
+
 import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 
@@ -27,15 +29,15 @@ const AnimatedTimer = ({ timestamp, size, x, y }) => {
       }}
     >
       <div
-        className="anim-timer-minute-hand"
+        className="animated-timer__minute-hand"
         style={{ transform: `rotate(${minutes}deg)` }}
       ></div>
       <div
-        className="anim-timer-second-hand"
+        className="animated-timer__second-hand"
         style={{ transform: `rotate(${seconds}deg)` }}
       ></div>
       <div
-        className="anim-timer-center-circle"
+        className="animated-timer__center-circle"
         style={{ width: 0.15 * size, height: 0.15 * size }}
       ></div>
     </div>

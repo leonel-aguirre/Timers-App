@@ -1,3 +1,5 @@
+import "./CreateTimerModal.scss";
+
 import React from "react";
 
 const CreateTimerModal = () => {

@@ -1,0 +1,32 @@
+%text-input {
+  border: 4px solid #fee440;
+  box-sizing: border-box;
+  border-radius: 20px;
+  background: none;
+  font-weight: 900;
+  color: #333;
+  outline: none;
+
+  &::placeholder {
+    color: #e8e8e8;
+  }
+}
+
+%button {
+  background: #fee440;
+  border-radius: 20px;
+  font-weight: 900;
+  text-align: center;
+  color: #897c2a;
+  outline: none;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background: #e7d14b;
+  }
+
+  &:active {
+    background: #fff095;
+  }
+}

@@ -1,6 +1,8 @@
+import "./style.scss";
+
 import React from "react";
+import MainPage from "./MainPage/MainPage";
 // import CreateTimerModal from "./CreateTimerModal";
-import MainPage from "./MainPage";
 
 const App = () => (
   <div>
